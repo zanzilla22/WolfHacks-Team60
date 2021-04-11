@@ -1,2 +1,0 @@
-# mateja's first file
-print("Team 60 is the best. Ut is taller than the rest")
