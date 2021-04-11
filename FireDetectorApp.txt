@@ -1,0 +1,26 @@
+
+import smtplib
+from tkinter import *
+
+window = Tk()
+
+window.title(" Fire Detection Contacting System")
+window.geometry("750x250")
+newlabel = Label(window, text="   Welcome to your fire detection contacting system!", font=("Arial Bold", 20))
+newlabel.grid(column=0, row=0)
+
+server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+server.login("projectfiredetector@gmail.com", "7nmdC9q^lMciC9oRXEen3wP*t")
+
+
+if 12==10:
+    server.sendmail("projectfiredetector@gmail.com", "731600@pdsb.net", """There is a fire in your house. This is a emergency. There is a fire in your house.""")
+
+def clicked_one():
+    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server.login("projectfiredetector@gmail.com", "7nmdC9q^lMciC9oRXEen3wP*t")
+    server.sendmail("projectfiredetector@gmail.com", "731600@pdsb.net", """This is a test. This is a test. If you can read this, it works properly. This is a test. This is a test.""")
+btn = Button(window, text="Test System", command=clicked_one)
+btn.grid(column=0, row=4)
+server.quit()
+window.mainloop()
