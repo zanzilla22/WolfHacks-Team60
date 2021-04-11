@@ -2,6 +2,7 @@ int enA = 5;
 int in1 = 8;
 int in2 = 9;
 float temp;
+float roomTemp = 20;
 
 void open(int x)
 {
@@ -19,4 +20,12 @@ void setup()
   pinMode (in1, OUTPUT);
   pinMode (in2, OUTPUT);
   Serial.begin(9600);
+}
+void loop()
+{
+  while(temp < roomTemp - 10)
+  {
+    open(100)
+    delay(1000);
+  }
 }
