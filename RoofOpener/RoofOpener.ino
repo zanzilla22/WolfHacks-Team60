@@ -25,11 +25,13 @@ void setup()
 void loop()
 {
   temp = analogRead(1) * 5 * 100 / 1024.00;
-  Serial.print(temp);
+  Serial.println(temp);
   open(100);
-  while(temp < roomTemp - 100)
+  while(temp < roomTemp - 5)
   {
     open(100)
     delay(1000);
+    temp = analogRead(1) * 5 * 100 / 1024.00;
+    Serial.println(temp);
   }
 }
