@@ -24,6 +24,7 @@ void setup()
 }
 void loop()
 {
+  open(100);
   while(temp < roomTemp - 10)
   {
     open(100)
