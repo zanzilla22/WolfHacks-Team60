@@ -24,6 +24,8 @@ void setup()
 }
 void loop()
 {
+  temp = analogRead(1) * 5 * 100 / 1024.00;
+  Serial.print(temp);
   open(100);
   while(temp < roomTemp - 100)
   {
