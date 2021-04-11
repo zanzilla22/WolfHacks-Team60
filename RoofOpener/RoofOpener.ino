@@ -25,7 +25,7 @@ void setup()
 void loop()
 {
   open(100);
-  while(temp < roomTemp - 10)
+  while(temp < roomTemp - 100)
   {
     open(100)
     delay(1000);
